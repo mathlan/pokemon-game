@@ -40,12 +40,6 @@ function checkLoot() {
     }
 }
 
-/*function blackIce () {
-    let heroPosi = getHeroPosition();
-    if (getCellContent(heroPosi.x, heroPosi.y) === true) {     
-    }
-}*/
-
 function goUp() {
     let heroPosi = getHeroPosition();
     let wallPosi = getWalls(heroPosi.x, heroPosi.y);
@@ -99,20 +93,6 @@ function goLeft() {
     }
 }
 
-function flash() {
-    let heroPosi = getHeroPosition();
-    let wallPosi = getWalls(heroPosi.x, heroPosi.y);
-
-        setHeroPosition(heroPosi.x, heroPosi.y + 1);
-        checkHeart ();
-        checkEnemy();
-        checkLoot();
-        if (isFrozen(heroPosi.x, heroPosi.y + 1)) { 
-            goDown();
-        }
-
-}
-
 function checkKey(e) {
     e = e || window.event;
   
@@ -124,9 +104,7 @@ function checkKey(e) {
       goLeft();
     } else if (e.keyCode == "39") {
       goRight();
-    } else if (e.keyCode == "70") {
-        flash();
-      }
+    }
       return false;
   } 
   
