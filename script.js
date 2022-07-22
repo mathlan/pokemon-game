@@ -35,7 +35,7 @@ function checkLoot() {
     if (getCellContent(heroPosi.x, heroPosi.y) === LOOT) {
         loot(heroPosi.x, heroPosi.y);
         if (getTreasures() === 0) {
-            alert("Bien joué mamene !");
+            alert("Bien joué !");
         }
     }
 }
@@ -48,7 +48,7 @@ function goUp() {
         checkHeart();
         checkEnemy();
         checkLoot();
-        if (isFrozen(heroPosi.x, heroPosi.y - 1)) { 
+        if (isFrozen(heroPosi.x, heroPosi.y - 1)) {
             goUp();
         }
     }
@@ -58,10 +58,10 @@ function goDown() {
     let wallPosi = getWalls(heroPosi.x, heroPosi.y);
     if (!wallPosi.south) {
         setHeroPosition(heroPosi.x, heroPosi.y + 1);
-        checkHeart ();
+        checkHeart();
         checkEnemy();
         checkLoot();
-        if (isFrozen(heroPosi.x, heroPosi.y + 1)) { 
+        if (isFrozen(heroPosi.x, heroPosi.y + 1)) {
             goDown();
         }
     }
@@ -71,10 +71,10 @@ function goRight() {
     let wallPosi = getWalls(heroPosi.x, heroPosi.y);
     if (!wallPosi.east) {
         setHeroPosition(heroPosi.x + 1, heroPosi.y);
-        checkHeart ();
+        checkHeart();
         checkEnemy();
         checkLoot();
-        if (isFrozen(heroPosi.x + 1, heroPosi.y)) { 
+        if (isFrozen(heroPosi.x + 1, heroPosi.y)) {
             goRight();
         }
     }
@@ -84,10 +84,10 @@ function goLeft() {
     let wallPosi = getWalls(heroPosi.x, heroPosi.y);
     if (!wallPosi.west) {
         setHeroPosition(heroPosi.x - 1, heroPosi.y);
-        checkHeart ();
+        checkHeart();
         checkEnemy();
         checkLoot();
-        if (isFrozen(heroPosi.x - 1, heroPosi.y)) { 
+        if (isFrozen(heroPosi.x - 1, heroPosi.y)) {
             goLeft();
         }
     }
@@ -95,19 +95,18 @@ function goLeft() {
 
 function checkKey(e) {
     e = e || window.event;
-  
+
     if (e.keyCode == "38") {
-      goUp();
+        goUp();
     } else if (e.keyCode == "40") {
-      goDown();
+        goDown();
     } else if (e.keyCode == "37") {
-      goLeft();
+        goLeft();
     } else if (e.keyCode == "39") {
-      goRight();
+        goRight();
     }
-      return false;
-  } 
-  
+    return false;
+}
 
 document.querySelector('#go-up').onclick = goUp;
 document.querySelector('#go-down').onclick = goDown;
@@ -115,5 +114,3 @@ document.querySelector('#go-right').onclick = goRight;
 document.querySelector('#go-left').onclick = goLeft;
 
 document.onkeydown = checkKey;
-
-
