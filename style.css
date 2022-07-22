@@ -1,0 +1,170 @@
+#game {
+    position: relative;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td {
+    border-style: solid;
+    border-color: #f9f9f9;
+}
+
+#hero {
+    position: absolute;
+    background: transparent url(images/pikachu.png) no-repeat;
+    background-size: 257px;
+    background-position: -10px -20px;
+    transition: top .5s, left .5s;
+}
+
+#hero.N {
+    background-position: -10px -215px;
+}
+#hero.E {
+    background-position: -10px -150px;
+}
+#hero.S {
+    background-position: -10px -20px;
+}
+#hero.W {
+    background-position: -10px -85px;
+}
+
+th, td {
+    padding: 0;
+}
+
+tr:nth-child(2) td, .N {
+    border-top-color: black !important;
+}
+
+td:last-child, .E {
+    border-right-color: black !important;
+}
+
+tr:last-child td, .S {
+    border-bottom-color: black !important;
+}
+
+th + td, .W {
+    border-left-color: black !important;
+}
+
+#game {
+    max-width: 1000px;
+}
+
+#controls {
+    float: right;
+    margin: 50px 10px 0 0;
+    background: transparent url(images/controls.svg) no-repeat;
+    background-size: contain;
+    width: 300px;
+    height: 300px;
+    position: relative;
+}
+
+#controls button {
+    position: absolute;
+    cursor: pointer;
+    padding: 0;
+    text-align: center;
+    background-color: transparent;
+    color: white;
+    font-weight: bold;
+    border: 0;
+    font-size: .7em;
+}
+
+#go-up {
+    height: 115px;
+    left: 125px;
+    top: 0;
+    width: 50px;
+}
+
+#go-down {
+    height: 115px;
+    left: 125px;
+    bottom: 0;
+    width: 50px;
+}
+
+#go-right {
+    width: 115px;
+    top: 125px;
+    right: 0;
+    height: 50px;
+}
+
+#go-left {
+    width: 115px;
+    top: 125px;
+    left: 0;
+    height: 50px;
+}
+
+.heart {
+    background: transparent url(images/heart.png) no-repeat center center;
+    background-size: contain;
+}
+
+#hearts {
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    top: -50px;
+}
+
+#hearts > div {
+    display: inline-block;
+    background: transparent url(images/heart.png) no-repeat center center;
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+}
+
+.monster {
+    background: transparent url(images/lolspell.png) no-repeat;
+    background-size: 436px;
+    background-position: -130px -0px;
+    text-align: right;
+    vertical-align: bottom;
+}
+
+.monster span {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    padding: 1px;
+}
+
+.loot {
+    background: transparent url(images/reward.png) no-repeat center center;
+    background-size: 70%;
+}
+
+#loot {
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    top: -100px;
+    width: 360px;
+}
+
+#loot > div {
+    display: inline-block;
+    background: transparent url(images/reward.png) no-repeat center center;
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+}
+
+.frozen {
+    background-color: lightblue;
+    border-color: lightblue;
+}
