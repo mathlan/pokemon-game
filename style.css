@@ -128,9 +128,9 @@ th + td, .W {
 }
 
 .monster {
-    background: transparent url(images/lolspell.png) no-repeat;
+    background: transparent url(images/ennemies.png) no-repeat;
     background-size: 436px;
-    background-position: -130px -0px;
+    background-position: -107px -3px;
     text-align: right;
     vertical-align: bottom;
 }
